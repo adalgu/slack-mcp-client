@@ -28,6 +28,23 @@
         "/Users/gunn.kim/study/01-active/mr_haydn/car_rental.db"
       ],
       "env": {}
+    },
+    "mcp-google-calendar": {
+      "timeout": 60,
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://backend.composio.dev/v3/mcp/f917ea2a-d189-4df6-8a74-1da7fd9245f8/mcp?user_id=pg-test-d0df30cc-e102-4efb-987f-fa1e445cf398"
+      ],
+      "env": {
+        "npm_config_yes": "true"
+      }
+    },
+    "time-mcp": {
+      "command": "npx",
+      "args": ["-y", "time-mcp"]
     }
   }
 } 
