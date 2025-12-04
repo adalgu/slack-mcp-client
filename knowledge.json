@@ -1,0 +1,54 @@
+{
+  "documents": [
+    {
+      "id": "doc-001",
+      "title": "회사 소개",
+      "content": "우리 회사는 2020년에 설립되었습니다. 주요 사업 영역은 AI 솔루션 개발과 클라우드 서비스입니다. 본사는 서울에 위치하며, 약 50명의 직원이 근무하고 있습니다.",
+      "metadata": {
+        "source": "company_intro.pdf",
+        "category": "general",
+        "created_at": "2025-01-01"
+      }
+    },
+    {
+      "id": "doc-002",
+      "title": "휴가 정책",
+      "content": "정규직 직원은 연간 15일의 유급휴가가 제공됩니다. 입사 3년 이상 시 연간 20일로 증가합니다. 휴가 신청은 최소 3일 전에 팀장 승인을 받아야 합니다. 병가는 별도로 연간 10일이 제공됩니다.",
+      "metadata": {
+        "source": "hr_policy.pdf",
+        "category": "hr",
+        "created_at": "2025-01-01"
+      }
+    },
+    {
+      "id": "doc-003",
+      "title": "업무 시간 및 재택근무",
+      "content": "기본 업무 시간은 오전 9시부터 오후 6시까지입니다. 유연근무제를 적용하여 코어타임(10시-4시) 내에서 자유롭게 출퇴근 가능합니다. 재택근무는 주 2일까지 가능하며, 팀장과 사전 협의가 필요합니다.",
+      "metadata": {
+        "source": "work_policy.pdf",
+        "category": "hr",
+        "created_at": "2025-01-01"
+      }
+    },
+    {
+      "id": "doc-004",
+      "title": "개발 환경 설정",
+      "content": "개발 환경은 Docker와 Kubernetes를 기반으로 합니다. 로컬 개발 시 docker-compose를 사용하고, 배포는 GitOps 방식으로 ArgoCD를 통해 진행됩니다. 코드 리뷰는 최소 1명 이상의 승인이 필요합니다.",
+      "metadata": {
+        "source": "dev_guide.pdf",
+        "category": "engineering",
+        "created_at": "2025-01-01"
+      }
+    },
+    {
+      "id": "doc-005",
+      "title": "온보딩 절차",
+      "content": "신규 입사자는 첫 주에 HR 오리엔테이션, IT 장비 수령, 팀 소개를 받습니다. 둘째 주부터 버디 프로그램을 통해 업무에 적응합니다. 수습 기간은 3개월이며, 수습 종료 시 정식 평가가 진행됩니다.",
+      "metadata": {
+        "source": "onboarding.pdf",
+        "category": "hr",
+        "created_at": "2025-01-01"
+      }
+    }
+  ]
+}

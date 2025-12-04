@@ -40,7 +40,7 @@
     "chunkSize": 1000,
     "providers": {
       "simple": {
-        "databasePath": "./knowledge.json"
+        "databasePath": "/root/knowledge.json"
       }
     }
   }
