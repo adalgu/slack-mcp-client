@@ -19,6 +19,15 @@
         "SLACK_BOT_TOKEN": "${SLACK_BOT_TOKEN}",
         "SLACK_TEAM_ID": "${SLACK_TEAM_ID}"
       }
+    },
+    "resort-db": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-server-sqlite-npx",
+        "/Users/gunn.kim/study/01-active/mr_haydn/car_rental.db"
+      ],
+      "env": {}
     }
   }
 } 
