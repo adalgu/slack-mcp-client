@@ -1,11 +1,14 @@
 services:
   slack-mcp-client:
-    image: ghcr.io/tuannvm/slack-mcp-client:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.local
     container_name: slack-mcp-client
     restart: unless-stopped
     environment:
       - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
       - SLACK_APP_TOKEN=${SLACK_APP_TOKEN}
+      - SLACK_TEAM_ID=${SLACK_TEAM_ID}
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o}
       - MCP_MODE=${MCP_MODE:-sse}
@@ -14,6 +17,7 @@ services:
       - ./config.json:/root/config.json:ro
       - ./mcp-servers.json:/root/mcp-servers.json:ro
       - ./knowledge.json:/root/knowledge.json:ro
+      - ./scripts:/root/scripts:ro
     # Example of connecting to another MCP server in the same compose network
     # depends_on:
     #   - mcp-github
