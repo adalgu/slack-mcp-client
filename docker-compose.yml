@@ -14,6 +14,7 @@ services:
       - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o}
       - MCP_MODE=${MCP_MODE:-sse}
       - LOG_LEVEL=${LOG_LEVEL:-info}
+      - WEBAPP_URL=${WEBAPP_URL:-http://localhost:8008}
     volumes:
       - ./config.json:/root/config.json:ro
       - ./mcp-servers.json:/root/mcp-servers.json:ro
