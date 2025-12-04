@@ -1,0 +1,47 @@
+{
+  "$schema": "https://github.com/tuannvm/slack-mcp-client/schema/config-schema.json",
+  "version": "2.0",
+  "slack": {
+    "botToken": "${SLACK_BOT_TOKEN}",
+    "appToken": "${SLACK_APP_TOKEN}"
+  },
+  "llm": {
+    "provider": "openai",
+    "useNativeTools": true,
+    "providers": {
+      "openai": {
+        "model": "gpt-5-mini",
+        "apiKey": "${OPENAI_API_KEY}",
+        "temperature": 0.7
+      }
+    } 
+  },
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "$HOME"]
+    }
+  },
+  "monitoring": {
+    "enabled": true,
+    "metricsPort": 8080,
+    "loggingLevel": "info"
+  },
+  "observability": {
+    "enabled": true,
+    "provider": "simple-otel",
+    "endpoint": "",
+    "serviceName": "slack-mcp-client",
+    "serviceVersion": "1.0.0"
+  },
+    "rag": {
+    "enabled": true,
+    "provider": "simple",
+    "chunkSize": 1000,
+    "providers": {
+      "simple": {
+        "databasePath": "./knowledge.json"
+      }
+    }
+  }
+}
